@@ -78,7 +78,7 @@ for model in ai.models():
 # Validate and switch to a model advertised by the API.
 ai.set_model("qwen3-8b")
 
-answer = ai.chat("Hello!", stream=False)
+answer = ai.chat("Hello!", stream=True)
 print(answer)
 ```
 
@@ -112,7 +112,7 @@ answer = ai.chat(
     "What did I tell you?",
     history=history,
     system="Answer clearly.",
-    stream=False,
+    stream=True,
 )
 print(answer)
 ```
