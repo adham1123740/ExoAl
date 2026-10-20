@@ -25,7 +25,7 @@ _______________________________________________________________
 ## Install
 
 ```bash
-python -m pip install .
+python -m pip install ExoAl .
 ```
 
 Dependency only:
