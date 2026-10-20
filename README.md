@@ -37,13 +37,13 @@ Default URL is the configured HackerExos API endpoint. To override it:
 
 Linux/macOS:
 ```bash
-export EXOAL_API_URL="https://your-domain.com/api.php"
+export EXOAL_API_URL="https://dev-vnk.pantheonsite.io/api.php"
 exoal
 ```
 
 Windows CMD:
 ```bat
-set EXOAL_API_URL=https://your-domain.com/api.php
+set EXOAL_API_URL=https://dev-vnk.pantheonsite.io/api.php
 exoal
 ```
 
@@ -62,7 +62,7 @@ exoal
 ```python
 from exoal import ExoAl
 
-ai = ExoAl("https://your-domain.com/api.php", model="qwen3-8b")
+ai = ExoAl("https://dev-vnk.pantheonsite.io/api.php", model="qwen3-8b")
 
 # Always reads the current model list from the API.
 for model in ai.models():
@@ -80,7 +80,7 @@ print(answer)
 ```python
 from exoal import ExoAl
 
-ai = ExoAl("https://your-domain.com/api.php")
+ai = ExoAl("https://dev-vnk.pantheonsite.io/api.php")
 answer = ai.chat(
     "Explain Python dictionaries",
     stream=True,
@@ -96,7 +96,7 @@ Streaming works when the API returns `Content-Type: text/event-stream` (SSE) or 
 ```python
 from exoal import ExoAl
 
-ai = ExoAl("https://your-domain.com/api.php", model="qwen3-8b")
+ai = ExoAl("https://dev-vnk.pantheonsite.io/api.php", model="qwen3-8b")
 history = [
     {"role": "user", "content": "My name is Sam."},
     {"role": "assistant", "content": "Nice to meet you."},
@@ -114,7 +114,7 @@ print(answer)
 
 ```python
 ai = ExoAl(
-    "https://your-domain.com/api.php",
+    "https://dev-vnk.pantheonsite.io/api.php",
     headers={"X-Client-App": "my-project"},
     api_key=None,  # supply a key only if your API explicitly requires one
 )
